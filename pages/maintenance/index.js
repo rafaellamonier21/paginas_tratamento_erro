@@ -1,8 +1,13 @@
 let isSucess = false
 
 function verifyFrontend() {
-    fetch('https://vendas.unimdebelem.com.br')
+    fetch('https://vendas.unimedbelem.com.br', {
+        method: 'GET',
+        mode: 'cors',
+    })
         .then(response => {
+
+            console.log(response.data)
             response.text()
             isSucess = true
         })
